@@ -56,6 +56,13 @@ Administrators struggle with **tracking, prioritizing, and assigning issues** ef
 
 Frontend (React + Tailwind + Framer Motion)
 
+### 🔑 Login Page
+![Login Page](https://github.com/user-attachments/assets/51912e2f-c5a7-47e8-8e2e-28c051b51749)
+
+### 🆕 Signup Page
+![Signup Page](https://github.com/user-attachments/assets/976af7b1-9c91-47b2-84e7-2ccce9823739)
+
+### 🏠 Dashboard
 ![Dashboard](https://github.com/user-attachments/assets/0babe60d-4b49-4c8d-87b1-e370cbbf3355)
 
 ### 📝 Report an Issue
