@@ -69,3 +69,8 @@ Backend (Node.js + Express)
         |
         v
 Database (MongoDB + Mongoose)
+
+***Photoes***
+![WhatsApp Image 2025-08-20 at 23 31 54_cf7ff4cb](https://github.com/user-attachments/assets/6ab7d939-680f-4bb6-959b-e757b3e70604)
+
+
