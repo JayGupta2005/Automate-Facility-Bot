@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useIssues } from '../context/IssueContext';
 
 const DashboardPage = () => {
-  const { user, isAdmin } = useAuth();
+  const { isAdmin } = useAuth(); // ✅ removed unused `user`
   const { 
     issues, 
     stats, 
@@ -16,18 +16,24 @@ const DashboardPage = () => {
   } = useIssues();
 
   const [selectedStatus, setSelectedStatus] = useState('all');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriority, setSelectedPriority] = useState('all');
+  // ✅ removed unused setters for category & priority
+  const [selectedCategory] = useState('all');
+  const [selectedPriority] = useState('all');
 
-  // ✅ Load issues on component mount / when loadIssues changes
+  // ✅ Load issues on component mount
   useEffect(() => {
     loadIssues();
   }, [loadIssues]);
 
-  // ✅ guard stats
-  const { pending = 0, resolved = 0, cancelled = 0, ['in-progress']: inProgress = 0 } = stats || {};
+  // ✅ safe destructure; renamed `in-progress` to inProgress
+  const { pending = 0, resolved = 0, cancelled = 0, inProgress = 0 } = {
+    pending: stats?.pending,
+    resolved: stats?.resolved,
+    cancelled: stats?.cancelled,
+    inProgress: stats?.['in-progress']
+  };
 
-  // Filter issues
+  // Filtering
   const filteredIssues = issues.filter(issue => {
     const statusMatch = selectedStatus === 'all' || issue.status === selectedStatus;
     const categoryMatch = selectedCategory === 'all' || issue.category === selectedCategory;
@@ -41,23 +47,6 @@ const DashboardPage = () => {
     { value: 'in-progress', label: 'In Progress', count: inProgress },
     { value: 'resolved', label: 'Resolved', count: resolved },
     { value: 'cancelled', label: 'Cancelled', count: cancelled }
-  ];
-
-  const categoryFilters = [
-    { value: 'all', label: 'All Categories' },
-    { value: 'electricity', label: 'Electricity', icon: '⚡' },
-    { value: 'wifi', label: 'WiFi', icon: '📶' },
-    { value: 'water', label: 'Water', icon: '💧' },
-    { value: 'cleanliness', label: 'Cleanliness', icon: '🧹' },
-    { value: 'other', label: 'Other', icon: '🔧' }
-  ];
-
-  const priorityFilters = [
-    { value: 'all', label: 'All Priorities' },
-    { value: 'low', label: 'Low', color: 'text-green-600' },
-    { value: 'medium', label: 'Medium', color: 'text-yellow-600' },
-    { value: 'high', label: 'High', color: 'text-orange-600' },
-    { value: 'urgent', label: 'Urgent', color: 'text-red-600' }
   ];
 
   const getStatusColor = (status) => {
@@ -206,9 +195,6 @@ const DashboardPage = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Filters */}
-        {/* (status, category, priority filters code stays same as your original) */}
 
         {/* Issues Grid */}
         <motion.div
