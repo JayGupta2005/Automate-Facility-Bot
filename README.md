@@ -9,8 +9,6 @@ Built with **React, Node.js, Express, and MongoDB**.
 
 ## ⚡ Project Overview
 
-![GitHub stars](https://img.shields.io/github/stars/your-username/facility-issue-reporting?style=social)  
-![GitHub forks](https://img.shields.io/github/forks/your-username/facility-issue-reporting?style=social)  
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)  
 ![Status](https://img.shields.io/badge/status-Prototype%20Ready-brightgreen)  
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-yellow.svg)  
@@ -55,11 +53,16 @@ Administrators struggle with **tracking, prioritizing, and assigning issues** ef
 
 ---
 
-## 🏗️ System Architecture
 
-```plaintext
 Frontend (React + Tailwind + Framer Motion)
-        |
+        |![WhatsApp Image 2025-08-20 at 23 31 54_cf7ff4cb](https://github.com/user-attachments/assets/add55c![WhatsApp![WhatsApp Image 2025-08-20 at 23 31 55_c5e36590](https://github.com/user-attachments/assets/b29d3632-4510-4a9a-8999-59dfb16e5693)
+ Image 2025-08-20 at 23 31 55_4f16d083](https://github.com/user-attachments/assets/e6afbc0d-2c47![WhatsApp Image 2025-08-20 at 23 31 55_cc2ef8dd](https://github.com/user-attachments/assets/0a2d8325-2caf-485e-9c6a-cc9306b149c0)
+-4ae5-971f-26e85ba97d6c![WhatsApp Image 2025-08-20 at 23 31 56_b81b493d](https://github.com/user-attachments/assets/2422c5f6-6fef-4fdc-95f0-78346a072541)
+)
+02-e558-4743-9bd1-7a1187d2e11e)
+
+## 🏗️ System Architecture
+```plaintext
         | REST API (Axios, Fetch)
         v
 Backend (Node.js + Express)
