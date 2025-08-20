@@ -57,6 +57,13 @@ Administrators struggle with **tracking, prioritizing, and assigning issues** ef
 Frontend (React + Tailwind + Framer Motion)
 
 ![Dashboard Preview](https://github.com/user-attachments/assets/0babe60d-4b49-4c8d-87b1-e370cbbf3355)
+![Dashboard](https://github.com/user-attachments/assets/0babe60d-4b49-4c8d-87b1-e370cbbf3355)
+
+### 📝 Report an Issue
+![Report Issue](https://github.com/user-attachments/assets/7b7fc45d-80c6-416c-8e67-280dfeb85871)
+
+### 👨‍💼 Admin Panel
+![Admin Panel](https://github.com/user-attachments/assets/c2579ab9-65aa-46aa-b730-e27190a297cf)
 
 ## 🏗️ System Architecture
 ```plaintext
